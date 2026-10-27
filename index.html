@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SmartBite | Recipe Recommendation</title><link rel="stylesheet" href="style.css"></head>
+<body><header><a class="brand" href="/">🥗 SmartBite</a><span>Ingredient-based food &amp; recipe recommendations</span></header><main>
+<section class="hero"><div><p class="eyebrow">COOK WITH WHAT YOU HAVE</p><h1>Your ingredients.<br><em>Your next favourite meal.</em></h1><p>Enter ingredients you have. SmartBite finds matching recipes, applies dietary and cooking-time filters, then ranks matches. The Phase 2 model is only a supporting signal.</p></div><div class="emoji" aria-hidden="true">🥑</div></section>
+<section class="search"><h2>Find recipes</h2><label for="ingredients">Ingredients (separate with commas)</label><textarea id="ingredients" rows="3" placeholder="potato, onion, tomato"></textarea>
+<div class="preferences"><label for="diet">Diet preference<select id="diet"><option value="any">Any</option><option value="vegetarian">Vegetarian (no meat or fish)</option><option value="vegan">Vegan (no animal products)</option><option value="non_vegetarian">Non-vegetarian (contains meat/fish)</option></select></label>
+<label for="maxtime">Maximum cooking time<select id="maxtime"><option value="0">Any time</option><option value="30">30 minutes</option><option value="60">1 hour</option><option value="120">2 hours</option></select></label>
+<label for="minmatch">Minimum ingredient matches<select id="minmatch"><option value="1">At least 1</option><option value="2" selected>At least 2</option><option value="3">At least 3</option></select></label></div>
+<div class="options"><p class="hint">Diet checks use recipe ingredients and dataset tags. Please verify recipes where source data is incomplete.</p><button id="find">Recommend recipes →</button></div></section>
+<section><div class="results-head"><h2>Recommended for you</h2><span id="count" aria-live="polite"></span></div><div id="results" class="results"><p class="empty">Enter ingredients above to discover recipes.</p></div></section></main>
+<footer>SmartBite · Ingredient similarity drives recommendations. The Phase 2 model predicts a high-rating category; it does not learn personal taste.</footer><script src="script.js"></script></body></html>

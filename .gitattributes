@@ -1,0 +1,2 @@
+# The recipe dataset is ~243 MB, above GitHub's 100 MB per-file limit, so it is stored with Git LFS.
+recipes_for_website.json filter=lfs diff=lfs merge=lfs -text
